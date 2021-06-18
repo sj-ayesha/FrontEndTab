@@ -1,0 +1,30 @@
+<mat-grid-list cols="1" rowHeight="2:1">
+  <mat-grid-tile>
+    <div class="tab">
+      <ul>
+        <li *ngFor="let tab of tabButton">
+          <button (click)="openContent(tab)" [ngClass]="{active: selected === tab}">
+            {{tab}}
+          </button>
+        </li>
+      </ul>
+    </div>
+
+  <ng-container *ngIf="selected === 'TAB 1'">
+    Tab 1 Content
+  </ng-container>
+
+  <ng-container *ngIf="selected === 'TAB 2'">
+    Tab 2 Content
+  </ng-container>
+
+  <ng-container *ngIf="selected === 'TAB 3'">
+    Tab 3 Content
+  </ng-container>
+
+  <ng-container *ngIf="selected === 'TAB 4'">
+    Tab 4 Content
+  </ng-container>
+  
+  </mat-grid-tile>
+</mat-grid-list>
