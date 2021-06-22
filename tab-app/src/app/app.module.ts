@@ -5,20 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabComponent } from './tab/tab.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { TabButtonsComponent } from './tab-buttons/tab-buttons.component';
+import { TabContentComponent } from './tab-content/tab-content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TabComponent
+    TabComponent,
+    TabButtonsComponent,
+    TabContentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTabsModule,
-    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

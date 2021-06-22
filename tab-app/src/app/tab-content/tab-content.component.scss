@@ -1,0 +1,15 @@
+div.content {
+  padding: 0 16px;
+  height: 100%;
+  width: 585px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+@media screen and (max-width: 700px) {
+  div.content {
+    margin-left: 0;
+    width: 100%;
+    padding: 0;
+  }
+}

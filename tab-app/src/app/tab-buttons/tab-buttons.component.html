@@ -1,0 +1,4 @@
+<div class="sidebar">
+  <a *ngFor="let tab of tabButtonList; let i= index" tabindex="{{i + 1}}" role="button" [attr.aria-selected]="isSelected === tab ? true : false" (click)="displayContent(tab)" [ngClass]="{active: isSelected === tab}">{{tab}}</a>
+</div>
+

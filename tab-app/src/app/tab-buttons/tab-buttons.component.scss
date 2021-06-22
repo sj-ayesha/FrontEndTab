@@ -1,0 +1,45 @@
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 100px;
+  background-color: #f1f1f1;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+
+  a {
+    border: 1px solid black;  
+    display: block;
+    color: black;
+    padding: 22px;
+    text-decoration: none;
+
+    &.active {
+      background-color: #ccc;
+    }
+
+    &:hover:not(.active) {
+      background-color: #555;
+    }
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+    a {
+      float: left;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}

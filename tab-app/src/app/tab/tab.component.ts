@@ -5,19 +5,31 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './tab.component.html',
   styleUrls: ['./tab.component.scss']
 })
+
 export class TabComponent implements OnInit {
 
-  public tabButton = ['TAB 1', 'TAB 2', 'TAB 3', 'TAB 4'];
-  public selected: any;
+
+  public tabButtons = ['TAB 1', 'TAB 2', 'TAB 3', 'TAB 4'];
+  public selectedTabButton: any;
+
+  public length = 0;
+  public domEles: any;
+
+  public ul = document.getElementById('list');
+  public liSelected: any;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.selected = this.tabButton[0];
+    this.selectedTabButton = this.tabButtons[0];
   }
 
+
   openContent(tabButton: any) {
-    this.selected = tabButton;
+
+    this.selectedTabButton = tabButton;
+    console.log('tab', this.selectedTabButton)
+    return this.selectedTabButton;
   }
 
 }
